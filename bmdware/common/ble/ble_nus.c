@@ -908,9 +908,9 @@ uint32_t ble_nus_set_beacon_config_ptr(const ble_beacon_config_t * p_beacon_conf
     return NRF_SUCCESS;
 }
 
-uint32_t ble_nus_send_string(ble_nus_t * p_nus, uint8_t * string, uint16_t length)
+uint32_t ble_nus_send_string(ble_nus_t * p_nus, uint8_t * string, uint16_t length) // DGS
 {
-    return send_ble_data(p_nus, string, length);
+    return send_ble_data(p_nus, string, length); // DGS 
 }
 
 void ble_nus_register_uart_callbacks(void)
@@ -922,7 +922,7 @@ void ble_nus_register_uart_callbacks(void)
 #endif    
 }
 
-static uint32_t send_ble_data(ble_nus_t * p_nus, uint8_t * string, uint16_t length)
+static uint32_t send_ble_data(ble_nus_t * p_nus, uint8_t * string, uint16_t length) // DGS
 {
     ble_gatts_hvx_params_t hvx_params;
     if (p_nus == NULL)

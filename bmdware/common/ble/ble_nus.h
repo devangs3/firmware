@@ -38,7 +38,7 @@
 #include <stdbool.h>
 #include "ble_beacon_config.h"
 
-#define BLE_UUID_NUS_SERVICE            0x0001                          /**< The UUID of the Nordic UART Service. */
+#define BLE_UUID_NUS_SERVICE            0x0001                          /**< The UUID of the Nordic UART Service. */ //DGS 
 #define BLE_UUID_NUS_TX_CHARACTERISTIC  0x0002                          /**< The UUID of the TX Characteristic. */
 #define BLE_UUID_NUS_RX_CHARACTERISTIC  0x0003                          /**< The UUID of the RX Characteristic. */
 
@@ -48,7 +48,7 @@
     #define BLE_NUS_MAX_DATA_LEN        (GATT_MTU_SIZE_DEFAULT - 3)    /**< Maximum length of data (in bytes) that can be transmitted by the Nordic UART service module to the peer. */
 #endif
 
-#define BLE_NUS_MAX_RX_CHAR_LEN         BLE_NUS_MAX_DATA_LEN            /**< Maximum length of the RX Characteristic (in bytes). */
+#define BLE_NUS_MAX_RX_CHAR_LEN         BLE_NUS_MAX_DATA_LEN            /**< Maximum length of the RX Characteristic (in bytes). */ //DGS
 #define BLE_NUS_MAX_TX_CHAR_LEN         BLE_NUS_MAX_DATA_LEN            /**< Maximum length of the TX Characteristic (in bytes). */
 
 // Forward declaration of the ble_nus_t type. 
@@ -75,7 +75,7 @@ typedef struct
  *
  * @details This structure contains status information related to the service.
  */
-typedef struct ble_nus_s
+typedef struct ble_nus_s //DGS 
 {
     uint8_t                  uuid_type;               /**< UUID type for Nordic UART Service Base UUID. */
     uint16_t                 service_handle;          /**< Handle of Nordic UART Service (as provided by the S110 SoftDevice). */

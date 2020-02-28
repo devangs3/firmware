@@ -412,7 +412,7 @@ int main(void)
         if(UART_MODE_BMDWARE_PT == uart_mode || 
             UART_MODE_DTM == uart_mode)
         {
-            uart_transfer_data();           
+            uart_transfer_data();  //   DGS      
 		}
         else if(UART_MODE_BMDWARE_AT == uart_mode)
         {

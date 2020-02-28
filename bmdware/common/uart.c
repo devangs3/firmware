@@ -195,7 +195,7 @@ void uart_clear_buffer(void)
 }
 
 static uint32_t ble_tx_count = 0;
-void uart_transfer_data(void)
+void uart_transfer_data(void) //DGS 
 {
     if(m_mode == UART_MODE_INACTIVE)
     {
@@ -244,7 +244,7 @@ void uart_transfer_data(void)
                     bmd_log("ringbuf peek error\n");
                 }
                 
-                err_code = ble_nus_send_string(mp_uart_service, tx_data_buffer, len);
+                err_code = ble_nus_send_string(mp_uart_service, tx_data_buffer, len); //DGS 
                 
                 if (err_code == NRF_SUCCESS)
                 {

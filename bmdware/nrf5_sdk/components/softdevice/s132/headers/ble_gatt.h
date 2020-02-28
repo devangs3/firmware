@@ -54,7 +54,7 @@ extern "C" {
  * @{ */
 
 /** @brief Default MTU size, in bytes. */
-#define GATT_EXTENDED_MTU_SIZE  247
+#define GATT_EXTENDED_MTU_SIZE  247 // DGS 
 #define GATT_MTU_SIZE_DEFAULT 23
 
 /**@brief Invalid Attribute Handle. */
